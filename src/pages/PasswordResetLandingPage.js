@@ -15,7 +15,7 @@ const PasswordResetLandingPage = () => {
 
     const onResetClicked = async()=>{
         try{
-            await axios.put(`${REACT_APP_SERVER_URL}/api/users/${passwordResetCode}/reset-password`,{passwordValue}) ;
+            await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/users/${passwordResetCode}/reset-password`,{passwordValue}) ;
             setIsSuccess(true)
         }catch(err){
             console.log(err) ;

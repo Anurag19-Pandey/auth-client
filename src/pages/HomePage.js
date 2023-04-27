@@ -23,7 +23,7 @@ const HomePage = () => {
     const saveChanges = async()=>{
         try{
           console.log("called") ;
-            const response = await axios.put(`${REACT_APP_SERVER_URL}/api/users/${id}`,{
+            const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/users/${id}`,{
                 favouriteFood ,
                 name , 
                 bio

@@ -15,7 +15,7 @@ const  SignUpPage = () => {
     const [confirmpasswordValue , setConfirmPasswordValue] = useState('') ;
 
     const onSignUpClicked = async()=>{
-        const response = await axios.post(`${REACT_APP_SERVER_URL}/api/signup`,{
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/signup`,{
           email : emailValue , 
           password : passwordValue
         });

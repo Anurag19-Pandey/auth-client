@@ -26,7 +26,7 @@ const LoginPage = () => {
     useEffect(() => {
         const loadOauthUrl = async() =>{
           try{
-              const response = await axios.get(`${REACT_APP_SERVER_URL}/api/auth/google/url`) ;
+              const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/auth/google/url`) ;
               const {url} = response.data ;
               setGoogleOAuthUrl(url) ;
             }catch(err){
@@ -38,7 +38,7 @@ const LoginPage = () => {
     }, []) ;
 
     const onLogInClicked = async()=>{
-       const response = await axios.post(`${REACT_APP_SERVER_URL}/api/login`,{
+       const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/login`,{
           email : emailValue ,
           password: passwordValue
         });

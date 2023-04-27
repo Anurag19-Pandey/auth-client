@@ -12,7 +12,7 @@ const ForgotPassword = () => {
 
     const onSubmitClick = async()=>{
         try{
-            await axios.put(`${REACT_APP_SERVER_URL}/api/forgot-password/${emailValue}`) ;
+            await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/forgot-password/${emailValue}`) ;
             setSuccess(true) ;
             setTimeout(()=>{
                 navigate('/login') ;

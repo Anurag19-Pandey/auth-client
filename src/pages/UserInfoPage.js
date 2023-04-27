@@ -22,7 +22,7 @@ const UserInfoPage = () => {
 
     const saveChanges = async()=>{
         try{
-            const response = await axios.put(`http://localhost : 5000/api/users/${id}`,{
+            const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/users/${id}`,{
                 favouriteFood ,
                 name , 
                 bio
