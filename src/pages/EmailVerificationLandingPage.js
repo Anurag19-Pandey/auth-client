@@ -6,7 +6,7 @@ import EmailVerificationSuccess from './EmailVerificationSuccess';
 import { EmailVerificationFail } from './EmailVerificationFail';
 
 const EmailVerificationLandingPage = () => {
-  
+  console.log("Email Verification Landing Page") ;
   const [isLoading , setIsLoading] = useState(true) ;
   const [isSuccess , setIsSuccess] = useState(false) ;
 
@@ -23,6 +23,7 @@ const EmailVerificationLandingPage = () => {
         setIsSuccess(true) ;
         setIsLoading(false) ;
       }catch(err){
+        console.log("Loading Verification Error") ;
         setIsSuccess(false) ;
         setIsLoading(false) ;
         console.log(err) ;
