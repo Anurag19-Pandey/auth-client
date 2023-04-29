@@ -7,7 +7,7 @@ const VerifyEmailPage = () => {
 
     useEffect(()=>{
         setTimeout(()=>{
-            navigate('/') ;
+            navigate('/otp-verification') ;
         },3000) ;
     },[navigate]) ;
 

@@ -7,6 +7,7 @@ import VerifyEmailPage from "./pages/VerifyEmailPage";
 import EmailVerificationLandingPage from "./pages/EmailVerificationLandingPage";
 import ForgotPassword from "./pages/ForgotPassword";
 import PasswordResetLandingPage from "./pages/PasswordResetLandingPage";
+import OtpVerification from "./pages/OtpVerification";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/verify-email/:verificationString" element={<EmailVerificationLandingPage/>}></Route>
       <Route path="/forgot-password" element={<ForgotPassword/>}></Route>
       <Route path="/reset-password/:passwordResetCode" element={<PasswordResetLandingPage/>}></Route>
+      <Route path="/otp-verification" element={<OtpVerification/>}/>
     </Routes>
     </BrowserRouter>
   );
